@@ -9,11 +9,28 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
+
 <body>
+    A: <input type="text" oninput="model.a=parseInt(this.value)" />
+    <br/> B: <input type="text" oninput="model.b=parseInt(this.value)" />
+    <br/>
+    <button onclick="calcSum()">Sum</button>
+
     <script>
+        const model = {};
+
+        async function calcSum() {
+            let input = {
+                a: model.a,
+                b: model.b
+            };
+            let result = await callPhp(input);
+            console.log(result);
+        }
+
         async function callPhp(obj) {
             let response = await axios.post('/05_index.php', obj);
-            console.log(response.data);
+            return response.data;
         }
     </script>
 </body>
