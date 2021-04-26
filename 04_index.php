@@ -1,5 +1,5 @@
 <?php
-$returnValue = new stdClass();
+$returnValue = new stdClass(); 
 if (array_key_exists("a", $_GET) && array_key_exists("b", $_GET)) {
     $a = (int)$_GET['a'];
     $b = (int)$_GET['b'];    
