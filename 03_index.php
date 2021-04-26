@@ -16,7 +16,9 @@
         $b = $_GET['b'];
         echo $a + $b;
     } else {
-        echo "<span style=\"color: red\">Angi URL-parametre, a og b</span>";
+        ?>        
+        <span style="color: red">Angi URL-parametre, a og b</span>
+        <?php
     }
     ?>
 </body>
